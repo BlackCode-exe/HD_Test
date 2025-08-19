@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Hay Day Town Visitors</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="toggle-container">
+    <button class="toggle-button" id="modeToggle">🌞</button>
+</div>
+
+<h1>Hay Day Town Visitors</h1>
+
+<h2 id="building">By Building
+    <input id="searchBuilding" placeholder="Search Building..." style="display:block; margin: 10px auto; padding: 5px;" type="text"/>
+</h2>
+<table>
+    <tr><th>Building</th><th>Visitors</th></tr>
+    <tr><td>Bed &amp; Breakfast</td><td>5</td></tr>
+    <tr><td>Cinema</td><td>5</td></tr>
+    <tr><td>Diner</td><td>6</td></tr>
+    <tr><td>Gift Shop</td><td>5</td></tr>
+    <tr><td>Grocery Store</td><td>13</td></tr>
+    <tr><td>Spa</td><td>8</td></tr>
+    <tr><td><strong>Total</strong></td><td><strong>42</strong></td></tr>
+</table>
+<div class="chart-container"><canvas id="buildingChart"></canvas></div>
+
+<h2 id="townie">By Townie Type
+    <input id="searchTownie" placeholder="Search Townie Type..." style="display:block; margin: 10px auto; padding: 5px;" type="text"/>
+</h2>
+<table>
+    <tr><th>Townie Type</th><th>Visitors</th></tr>
+    <tr><td>Actress</td><td>5</td></tr>
+    <tr><td>Cowboy</td><td>8</td></tr>
+    <tr><td>Dancer</td><td>3</td></tr>
+    <tr><td>Local</td><td>3</td></tr>
+    <tr><td>Mechanic</td><td>4</td></tr>
+    <tr><td>Old man</td><td>5</td></tr>
+    <tr><td>Sales</td><td>4</td></tr>
+    <tr><td>Strongman</td><td>4</td></tr>
+    <tr><td>Teacher</td><td>2</td></tr>
+    <tr><td>Tourist</td><td>4</td></tr>
+    <tr><td><strong>Total</strong></td><td><strong>42</strong></td></tr>
+</table>
+<div class="chart-container"><canvas id="townieChart"></canvas></div>
+
+<h2 id="cross">Cross Table
+    <input id="searchCross" placeholder="Search Cross Table..." style="display:block; margin: 10px auto; padding: 5px;" type="text"/>
+</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Townie Type</th>
+            <th>Bed &amp; Breakfast</th>
+            <th>Cinema</th>
+            <th>Diner</th>
+            <th>Gift Shop</th>
+            <th>Grocery Store</th>
+            <th>Spa</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>Actress</td><td>0</td><td>1</td><td>1</td><td>0</td><td>2</td><td>1</td><td>5</td></tr>
+        <tr><td>Cowboy</td><td>1</td><td>0</td><td>2</td><td>0</td><td>3</td><td>2</td><td>8</td></tr>
+        <tr><td>Dancer</td><td>1</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>3</td></tr>
+        <tr><td>Local</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>3</td></tr>
+        <tr><td>Mechanic</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1</td><td>4</td></tr>
+        <tr><td>Old man</td><td>0</td><td>2</td><td>0</td><td>1</td><td>1</td><td>1</td><td>5</td></tr>
+        <tr><td>Sales</td><td>0</td><td>0</td><td>1</td><td>0</td><td>2</td><td>1</td><td>4</td></tr>
+        <tr><td>Strongman</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>4</td></tr>
+        <tr><td>Teacher</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>2</td></tr>
+        <tr><td>Tourist</td><td>2</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>4</td></tr>
+        <tr><td><strong>Total</strong></td><td><strong>5</strong></td><td><strong>5</strong></td><td><strong>6</strong></td><td><strong>5</strong></td><td><strong>13</strong></td><td><strong>8</strong></td><td><strong>42</strong></td></tr>
+    </tbody>
+</table>
+<div class="chart-container"><canvas id="crossChart"></canvas></div>
+
+<footer style="text-align:center; font-size:12px; margin-top:60px; color:gray;">
+    © Copyright Black Production All Rights Reserved 2025
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
